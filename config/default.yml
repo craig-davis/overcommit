@@ -502,6 +502,14 @@ PreCommit:
     flags: ['-l']
     include: '**/*.php'
 
+  PhpMd:
+    enabled: false
+    description: 'Testing with PHP Mess Detector'
+    required_executable: 'vendor/bin/phpmd'
+    command: 'vendor/bin/phpmd'
+    flags: ['text', 'codesize']
+    include: '**/*.php'
+
   PhpCs:
     enabled: false
     description: 'Analyze with PHP_CodeSniffer'
